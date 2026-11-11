@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Clear, customer-focused website copy for local service businesses.">
+  <title>Northline Copy Co. — Words that win customers</title>
+  <style>
+    :root {
+      --ink: #17251f;
+      --muted: #64736b;
+      --paper: #f7f8f4;
+      --white: #fff;
+      --green: #244d3d;
+      --lime: #d8f078;
+      --line: #e3e8df;
+      --serif: Georgia, "Times New Roman", serif;
+      --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: min(1120px, calc(100% - 44px)); margin: 0 auto; }
+    header { height: 82px; display: flex; align-items: center; border-bottom: 1px solid var(--line); background: rgba(247,248,244,.92); }
+    .nav { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { font-size: 15px; font-weight: 850; letter-spacing: -.04em; display: flex; align-items: center; gap: 10px; }
+    .brand-mark { width: 29px; height: 29px; border-radius: 9px; background: var(--green); color: var(--lime); display: grid; place-items: center; font-family: var(--serif); font-size: 20px; }
+    .navlinks { display: flex; gap: 30px; align-items: center; color: #4d5b53; font-size: 13px; font-weight: 650; }
+    .navlinks a:hover { color: var(--green); }
+    .btn { display: inline-flex; justify-content: center; align-items: center; gap: 9px; padding: 14px 19px; border-radius: 7px; background: var(--green); color: white; font-size: 13px; font-weight: 750; transition: transform .2s, background .2s; }
+    .btn:hover { background: #17382b; transform: translateY(-2px); }
+    .btn.light { background: var(--lime); color: var(--ink); }
+    .btn.light:hover { background: #c9e65d; }
+    .hero { padding: 100px 0 86px; position: relative; overflow: hidden; }
+    .hero-grid { display: grid; grid-template-columns: 1.12fr .88fr; gap: 64px; align-items: center; }
+    .eyebrow { color: #557263; text-transform: uppercase; letter-spacing: .16em; font-size: 10px; font-weight: 850; display: flex; align-items: center; gap: 10px; }
+    .eyebrow:before { content: ""; width: 24px; height: 1px; background: #8ca28e; }
+    h1 { font-family: var(--serif); font-size: clamp(49px, 6.4vw, 78px); line-height: .99; letter-spacing: -.055em; font-weight: 500; margin: 23px 0; max-width: 690px; }
+    h1 em { color: #547664; font-weight: 500; }
+    .hero-copy { color: var(--muted); font-size: 16px; line-height: 1.8; max-width: 510px; }
+    .hero-actions { display: flex; align-items: center; gap: 23px; margin-top: 31px; flex-wrap: wrap; }
+    .text-link { font-size: 13px; font-weight: 750; border-bottom: 1px solid #a9b7ac; padding-bottom: 4px; }
+    .note { margin-top: 27px; font-size: 11px; color: #7a887f; }
+    .visual { background: #e8eee4; border-radius: 13px; min-height: 430px; padding: 25px; position: relative; display: flex; align-items: center; justify-content: center; }
+    .paper-card { background: #fff; width: 88%; padding: 33px 30px; border-radius: 5px; box-shadow: 0 18px 55px rgba(32,54,41,.11); transform: rotate(2deg); }
+    .paper-top { display: flex; justify-content: space-between; color: #89958d; font-size: 9px; text-transform: uppercase; letter-spacing: .13em; padding-bottom: 17px; border-bottom: 1px solid #e8ece7; }
+    .paper-card h3 { font-family: var(--serif); font-weight: 500; font-size: 34px; line-height: 1.05; letter-spacing: -.04em; margin: 25px 0 13px; }
+    .paper-card p { color: #6c7a71; font-size: 11px; line-height: 1.7; }
+    .paper-line { height: 5px; border-radius: 5px; background: #edf0eb; margin-top: 10px; }
+    .paper-line.short { width: 67%; }
+    .paper-tag { display: inline-block; margin-top: 23px; background: #e9f4c5; color: #3b593c; font-size: 9px; padding: 8px 11px; border-radius: 3px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+    .stamp { position: absolute; bottom: 27px; right: 22px; background: var(--lime); width: 91px; height: 91px; border-radius: 50%; display: grid; place-items: center; text-align: center; font-size: 10px; line-height: 1.25; font-weight: 850; transform: rotate(-10deg); }
+    .trust { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 22px 0; }
+    .trust-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+    .trust-label { color: #87938b; text-transform: uppercase; letter-spacing: .14em; font-size: 9px; font-weight: 800; }
+    .trust-item { color: #53645a; font-size: 12px; font-weight: 750; }
+    section { padding: 92px 0; }
+    .section-head { display: flex; justify-content: space-between; align-items: end; gap: 30px; margin-bottom: 42px; }
+    h2 { font-family: var(--serif); font-size: clamp(37px, 4.3vw, 53px); line-height: 1.04; letter-spacing: -.045em; font-weight: 500; margin: 15px 0 0; max-width: 590px; }
+    .section-intro { max-width: 330px; color: var(--muted); font-size: 13px; line-height: 1.8; }
+    .services { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
+    .service { background: #fff; border: 1px solid var(--line); border-radius: 9px; padding: 27px; min-height: 245px; }
+    .num { color: #8b9c8e; font-size: 10px; font-weight: 850; letter-spacing: .1em; }
+    .service h3 { font-family: var(--serif); font-size: 25px; font-weight: 500; margin: 34px 0 11px; letter-spacing: -.03em; }
+    .service p { color: var(--muted); font-size: 12px; line-height: 1.8; margin: 0; }
+    .sample-section { background: #203e32; color: #fff; }
+    .sample-section .eyebrow { color: #c5d7c6; }
+    .sample-section h2 { max-width: 620px; }
+    .sample-section .section-intro { color: #c3d0c6; }
+    .sample-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 42px; }
+    .sample { background: #2b4a3d; border: 1px solid #496454; border-radius: 9px; padding: 29px; }
+    .sample-label { font-size: 9px; letter-spacing: .14em; text-transform: uppercase; color: #c3d0c6; font-weight: 850; }
+    .sample h3 { font-family: var(--serif); font-size: 29px; line-height: 1.12; font-weight: 500; margin: 24px 0 13px; }
+    .sample p { color: #d2ddd4; font-size: 12px; line-height: 1.8; }
+    .sample.after { background: #f7f8f4; color: var(--ink); border-color: #f7f8f4; }
+    .sample.after .sample-label { color: #557263; }
+    .sample.after p { color: #65736a; }
+    .process { display: grid; grid-template-columns: repeat(3, 1fr); gap: 35px; margin-top: 45px; }
+    .step { border-top: 1px solid #cbd5ca; padding-top: 19px; }
+    .step strong { color: #829486; font-size: 10px; letter-spacing: .12em; }
+    .step h3 { font-family: var(--serif); font-size: 24px; font-weight: 500; margin: 18px 0 8px; }
+    .step p { color: var(--muted); font-size: 12px; line-height: 1.8; margin: 0; }
+    .about-box { background: #eaf0e7; border-radius: 12px; padding: 48px; display: grid; grid-template-columns: .8fr 1.2fr; gap: 55px; align-items: center; }
+    .about-mark { background: var(--green); color: var(--lime); border-radius: 10px; min-height: 230px; display: grid; place-items: center; font-family: var(--serif); font-size: 90px; }
+    .about-box h2 { font-size: 43px; }
+    .about-box p { color: #607067; font-size: 13px; line-height: 1.9; }
+    .contact { background: #dff078; padding: 83px 0; }
+    .contact-inner { display: flex; align-items: center; justify-content: space-between; gap: 30px; }
+    .contact h2 { max-width: 650px; }
+    .contact p { color: #526346; font-size: 13px; line-height: 1.7; }
+    .contact .btn { background: var(--ink); white-space: nowrap; }
+    footer { padding: 25px 0; background: #17251f; color: #d7e0d8; }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; font-size: 10px; color: #aab9ae; }
+    .footer-brand { color: white; font-weight: 850; letter-spacing: -.02em; }
+    @media (max-width: 760px) {
+      .wrap { width: min(100% - 32px, 560px); }
+      header { height: 70px; }
+      .navlinks { display: none; }
+      .hero { padding: 67px 0 55px; }
+      .hero-grid, .about-box { grid-template-columns: 1fr; gap: 35px; }
+      .visual { min-height: 340px; }
+      section { padding: 68px 0; }
+      .section-head, .contact-inner { display: block; }
+      .section-intro { margin-top: 18px; }
+      .services, .process { grid-template-columns: 1fr; gap: 12px; }
+      .service { min-height: auto; }
+      .service h3 { margin-top: 22px; }
+      .sample-grid { grid-template-columns: 1fr; }
+      .about-box { padding: 25px; }
+      .about-mark { min-height: 150px; }
+      .contact .btn { margin-top: 15px; }
+      .footer-inner { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#top"><span class="brand-mark">N</span> NORTHLINE COPY CO.</a>
+      <nav class="navlinks" aria-label="Main navigation">
+        <a href="#services">Services</a><a href="#work">Sample work</a><a href="#process">How it works</a><a href="#about">About</a>
+      </nav>
+      <a class="btn" href="#contact">Let's talk <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Copywriting for local businesses</div>
+          <h1>Good service deserves <em>great words.</em></h1>
+          <p class="hero-copy">I help local service businesses explain what makes them worth choosing — with clear website copy that turns visitors into enquiries.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#contact">Improve my website <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="#work">See a writing example</a>
+          </div>
+          <div class="note">Straightforward copy. A clear process. No confusing marketing jargon.</div>
+        </div>
+        <div class="visual" aria-label="Website copy sample illustration">
+          <div class="paper-card">
+            <div class="paper-top"><span>Website copy concept</span><span>01 / 03</span></div>
+            <h3>A cleaner home.<br>A little more time<br>for what matters.</h3>
+            <p>Reliable home cleaning, tailored to your schedule. Get a fresh start without giving up your weekend.</p>
+            <div class="paper-line"></div><div class="paper-line"></div><div class="paper-line short"></div>
+            <span class="paper-tag">Clear message · Clear next step</span>
+          </div>
+          <div class="stamp">WORDS<br>WITH<br>PURPOSE</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="trust">
+      <div class="wrap trust-inner">
+        <span class="trust-label">Made for service businesses</span>
+        <span class="trust-item">Home cleaning</span><span class="trust-item">Landscaping</span><span class="trust-item">Property care</span><span class="trust-item">Local services</span>
+      </div>
+    </div>
+
+    <section id="services">
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="eyebrow">What I can help with</div><h2>Make every word<br>pull its weight.</h2></div>
+          <p class="section-intro">Your website should quickly tell people what you do, why it matters, and what to do next. I focus on the words that make that happen.</p>
+        </div>
+        <div class="services">
+          <article class="service"><span class="num">01 / WEBSITE</span><h3>Website copy</h3><p>Clear, persuasive homepages and service pages that help visitors understand your business and take the next step.</p></article>
+          <article class="service"><span class="num">02 / CONVERSION</span><h3>Calls to action</h3><p>Stronger headlines, buttons, and enquiry prompts that make it easier for potential customers to contact you.</p></article>
+          <article class="service"><span class="num">03 / REFRESH</span><h3>Copy clean-up</h3><p>Make existing website text easier to read, more specific, and more focused on what your customers care about.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="sample-section" id="work">
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="eyebrow">A quick example</div><h2>From generic to customer-focused.</h2></div>
+          <p class="section-intro">A sample rewrite for a fictional home-cleaning business. It shows the approach — not a client result or testimonial.</p>
+        </div>
+        <div class="sample-grid">
+          <article class="sample">
+            <div class="sample-label">Before · Generic</div>
+            <h3>Welcome to our cleaning company.</h3>
+            <p>We provide professional cleaning services at affordable prices. Contact us today to learn more about our services.</p>
+          </article>
+          <article class="sample after">
+            <div class="sample-label">After · Customer-focused</div>
+            <h3>Come home to clean — without losing your weekend.</h3>
+            <p>From regular upkeep to a one-time deep clean, get a home that feels refreshed and a schedule that works for you. Tell us what you need and request a quote.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="process">
+      <div class="wrap">
+        <div class="eyebrow">Simple from start to finish</div>
+        <h2>A small process.<br>A clearer website.</h2>
+        <div class="process">
+          <article class="step"><strong>STEP 01</strong><h3>Tell me about your business</h3><p>Share your website, services, ideal customers, and what you want your copy to achieve.</p></article>
+          <article class="step"><strong>STEP 02</strong><h3>I write the first draft</h3><p>I'll shape the message around your customers and give you clear copy to review.</p></article>
+          <article class="step"><strong>STEP 03</strong><h3>Review and refine</h3><p>You share feedback, I make the agreed revisions, and you receive copy ready to use.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap">
+        <div class="about-box">
+          <div class="about-mark">N.</div>
+          <div>
+            <div class="eyebrow">A little about Northline</div>
+            <h2>Thoughtful words. No empty promises.</h2>
+            <p>Northline Copy Co. is a growing independent copywriting service focused on helping local businesses communicate clearly. The goal is simple: understand what makes your service useful, put that into words, and give potential customers a clear next step.</p>
+            <p>Every project starts with listening — because good copy should sound like your business, not a generic template.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="wrap contact-inner">
+        <div>
+          <div class="eyebrow">Have a website that needs work?</div>
+          <h2>Let's make your message clearer.</h2>
+          <p>Send your website and a little about what you do. I'll take a look and reply about a possible next step.</p>
+        </div>
+        <a class="btn" href="mailto:Northlinecopyco@gmail.com?subject=Website%20copywriting%20enquiry">Start a conversation <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <span class="footer-brand">NORTHLINE COPY CO.</span>
+      <span>Clear words for businesses doing good work.</span>
+      <span>© <span id="year"></span> Northline Copy Co.</span>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
